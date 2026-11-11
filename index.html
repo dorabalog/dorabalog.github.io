@@ -53,7 +53,19 @@
     <span id="footer-text"></span>
   </footer>
 
-  <script src="content.js"></script>
-  <script src="render.js"></script>
+  <script>
+    // Load content fresh each visit so edits show up right away (no stale browser cache).
+    (function () {
+      var v = Date.now();
+      var c = document.createElement("script");
+      c.src = "content.js?v=" + v;
+      c.onload = function () {
+        var r = document.createElement("script");
+        r.src = "render.js?v=" + v;
+        document.body.appendChild(r);
+      };
+      document.body.appendChild(c);
+    })();
+  </script>
 </body>
 </html>
