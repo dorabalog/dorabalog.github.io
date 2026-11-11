@@ -85,6 +85,36 @@
       }).join("")
     : soon;
 
+  // Simple text rows (talks, awards, certifications)
+  const titleLink = (t, url) =>
+    has(url) ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(t)}</a>` : esc(t);
+  const meta = (...parts) => parts.filter(has).map(esc).join(" · ");
+  const simple = (items, fn) =>
+    (items || []).length ? items.map((x) => `<article class="row text">${fn(x)}</article>`).join("") : soon;
+
+  $("talk-list").innerHTML = simple(typeof TALKS !== "undefined" ? TALKS : [], (t) => `
+    <div>
+      ${has(t.type) ? `<span class="badge">${esc(t.type)}</span>` : ""}
+      <h3>${esc(t.title)}</h3>
+      <p class="muted">${meta(t.event, t.location, t.date)}</p>
+      ${linkRow(t.links)}
+    </div>`);
+
+  $("award-list").innerHTML = simple(typeof AWARDS !== "undefined" ? AWARDS : [], (a) => `
+    <div class="date">${esc(a.year)}</div>
+    <div>
+      <h3>${titleLink(a.title, a.url)}</h3>
+      ${has(a.organization) ? `<p class="muted">${esc(a.organization)}</p>` : ""}
+      ${has(a.description) ? `<p>${esc(a.description)}</p>` : ""}
+    </div>`);
+
+  $("cert-list").innerHTML = simple(typeof CERTIFICATIONS !== "undefined" ? CERTIFICATIONS : [], (c) => `
+    <div class="date">${esc(c.date)}</div>
+    <div>
+      <h3>${titleLink(c.title, c.url)}${has(c.status) ? ` <span class="badge${/progress/i.test(c.status) ? " soft" : ""}">${esc(c.status)}</span>` : ""}</h3>
+      ${has(c.issuer) ? `<p class="muted">${esc(c.issuer)}</p>` : ""}
+    </div>`);
+
   // News
   $("news-list").innerHTML = NEWS.length
     ? NEWS.map((n) => `

@@ -46,7 +46,9 @@ p { margin: 0 0 .6em; }
 }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
 .nav-name { font-weight: 600; color: var(--text); }
-.nav-links { display: flex; gap: 20px; font-size: 14px; }
+.nav-links { display: flex; gap: 20px; font-size: 14px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-name { white-space: nowrap; }
 .nav-links a { color: var(--muted); }
 .nav-links a:hover { color: var(--text); text-decoration: none; }
 
@@ -97,6 +99,18 @@ p { margin: 0 0 .6em; }
 .venue { font-style: italic; color: var(--muted); }
 .date { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 2px; }
 .row .pill-row { margin-top: 8px; }
+
+.row.text { grid-template-columns: 90px 1fr; gap: 16px; }
+.row.text:has(> div:only-child) { grid-template-columns: 1fr; }
+.row.text > .date { padding-top: 3px; }
+.badge {
+  display: inline-block; vertical-align: middle;
+  font: 500 11px Inter, system-ui, sans-serif; letter-spacing: .03em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 999px; margin-bottom: 6px;
+  background: var(--accent); color: var(--bg);
+}
+.badge.soft { background: var(--accent-soft); color: var(--accent); }
+h3 .badge { margin: 0 0 0 6px; }
 
 .footer { padding-top: 48px; padding-bottom: 48px; color: var(--muted); font-size: 13px; }
 

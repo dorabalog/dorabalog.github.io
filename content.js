@@ -14,7 +14,7 @@ const SITE = {
 
   // Bio: one string per paragraph.
   bio: [
-    "",
+    "Dora is a PhD Candidate in Biomedical Engineering at Boston University. Her research focuses on validating statistical methods against biophysically detailed compartmental models. She also serves as the President of BU's Graduate Women in Science and Engineering (GWISE) and hosts the Neurophotonics Podcast.",
   ],
 
   // Links in the header. Leave "" to hide one.
@@ -63,6 +63,42 @@ const PUBLICATIONS = [
   //   url: "",           // link to the paper
   //   thumbnail: "",
   //   links: [{ label: "PDF", url: "" }, { label: "Code", url: "" }],
+  // },
+];
+
+/* ---------- TALKS & POSTERS ---------- */
+const TALKS = [
+  // {
+  //   type: "Talk",      // "Talk", "Poster", "Invited talk", "Panel", ...
+  //   title: "",
+  //   event: "",         // e.g. "Society for Neuroscience 2026"
+  //   location: "",      // e.g. "San Diego, CA"
+  //   date: "",          // e.g. "Nov 2026"
+  //   links: [{ label: "Slides", url: "" }, { label: "Poster", url: "" }],
+  // },
+];
+
+/* ---------- AWARDS & FELLOWSHIPS ---------- */
+const AWARDS = [
+  // {
+  //   title: "",
+  //   organization: "",  // who gave it
+  //   year: "",
+  //   description: "",   // optional, one line
+  //   url: "",           // optional
+  // },
+];
+
+/* ---------- CERTIFICATIONS & COURSES ---------- */
+// For courses outside your field (e.g. IP law), set status to
+// "In progress" while you're taking them, "Completed" when done.
+const CERTIFICATIONS = [
+  // {
+  //   title: "",         // e.g. "Intellectual Property Law"
+  //   issuer: "",        // e.g. "Coursera · University of Pennsylvania"
+  //   date: "",          // e.g. "2026"
+  //   status: "",        // "In progress" or "Completed"
+  //   url: "",           // certificate or course link
   // },
 ];
 
