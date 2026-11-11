@@ -20,7 +20,7 @@ const SITE = {
   // Links in the header. Leave "" to hide one.
   links: {
     email: "",            // e.g. "you@bu.edu"
-    linkedin: "",         // full URL
+    linkedin: "https://www.linkedin.com/in/dorabalog/",
     github: "https://github.com/dorabalog",
     scholar: "",          // Google Scholar URL
     orcid: "",            // ORCID URL
