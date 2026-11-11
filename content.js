@@ -31,6 +31,17 @@ const SITE = {
 /* ---------- PROJECTS ---------- */
 const PROJECTS = [
   {
+    title: "Neurophotonics Podcast",
+    year: "2024–2026",
+    description:
+      "Host of the Boston University Neurophotonics Center podcast, interviewing researchers about breakthroughs across neuroscience, photonics, and data science.",
+    image: "images/projects/npc-podcast.jpg",
+    tags: ["Science communication", "Podcast"],
+    links: [
+      { label: "Website", url: "https://www.bu.edu/neurophotonics/news-events/neurophotonics-podcast/" },
+    ],
+  },
+  {
     title: "Behavior Tracking",
     year: "2023",
     description:
