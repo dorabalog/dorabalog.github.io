@@ -23,7 +23,7 @@ const SITE = {
     linkedin: "https://www.linkedin.com/in/dorabalog/",
     github: "https://github.com/dorabalog",
     scholar: "",          // Google Scholar URL
-    orcid: "",            // ORCID URL
+    orcid: "https://orcid.org/0009-0004-5296-5725",
     cv: "",               // e.g. "files/CV.pdf" (put the PDF in a files/ folder)
   },
 };
