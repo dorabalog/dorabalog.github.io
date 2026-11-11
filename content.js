@@ -32,7 +32,7 @@ const SITE = {
 const PROJECTS = [
   {
     title: "Neurophotonics Podcast",
-    year: "2024–2026",
+    year: "2024–2026 · 2 seasons",
     description:
       "Host of the Boston University Neurophotonics Center podcast, interviewing researchers about breakthroughs across neuroscience, photonics, and data science.",
     image: "images/projects/npc-podcast.jpg",
