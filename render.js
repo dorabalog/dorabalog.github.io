@@ -134,4 +134,10 @@
     : soon;
 
   $("footer-text").textContent = `© ${new Date().getFullYear()} ${SITE.name}`;
+
+  // Content loads after the browser tries to jump to #section links, so jump again.
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target) requestAnimationFrame(() => target.scrollIntoView());
+  }
 })();
