@@ -103,12 +103,46 @@ const CERTIFICATIONS = [
 ];
 
 /* ---------- NEWS / MEDIA ---------- */
+// Newest first.
 const NEWS = [
+  {
+    date: "Sep 2026",
+    title: "Catalyst Summit 2026",
+    source: "BU College of Engineering",
+    url: "https://www.bu.edu/eng/research-impact/catalyst-summit-2026/",
+    thumbnail: "images/news/catalyst-summit.jpg",
+    links: [
+      { label: "LinkedIn post", url: "https://lnkd.in/p/ej3-BjgG" },
+      { label: "LinkedIn post", url: "https://lnkd.in/p/ebVTUwBv" },
+    ],
+  },
+  {
+    date: "Jan 2026",
+    title: "Tudomány határok nélkül Újvidéktől Bostonig (Science Without Borders: From Novi Sad to Boston)",
+    source: "Európa Kollégium · in Hungarian",
+    url: "https://europakollegium.com/tudomany-hatarok-nelkul-ujvidektol-bostonig/",
+    thumbnail: "images/news/europa-kollegium.jpg",
+  },
+  {
+    date: "Jul 2025",
+    title: "One of Myriad Ways to Prepare for a Dissertation Defense",
+    source: "BU Today",
+    url: "https://www.bu.edu/today/close-ups/2025/knitting/",
+    thumbnail: "images/news/bu-today-knitting.jpg",
+  },
+  {
+    date: "Mar 2025",
+    title: "Ambassadors for those underrepresented in STEM",
+    source: "BU College of Engineering",
+    url: "https://www.bu.edu/eng/2025/03/11/ambassadors-for-those-underrepresented-in-stem/",
+    thumbnail: "images/news/abrcms-judges.jpg",
+  },
   // {
   //   date: "",          // e.g. "Nov 2026"
   //   title: "",
   //   source: "",        // e.g. "BU Today"
   //   url: "",
   //   thumbnail: "",     // optional
+  //   links: [],         // optional extra links, e.g. [{ label: "LinkedIn post", url: "" }]
   // },
 ];

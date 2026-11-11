@@ -119,11 +119,16 @@
   $("news-list").innerHTML = NEWS.length
     ? NEWS.map((n) => `
       <article class="row news">
-        ${has(n.thumbnail) ? `<img class="thumb" src="${esc(n.thumbnail)}" alt="" loading="lazy">` : ""}
+        ${has(n.thumbnail)
+          ? (has(n.url)
+              ? `<a href="${esc(n.url)}" target="_blank" rel="noopener" tabindex="-1"><img class="thumb" src="${esc(n.thumbnail)}" alt="" loading="lazy"></a>`
+              : `<img class="thumb" src="${esc(n.thumbnail)}" alt="" loading="lazy">`)
+          : ""}
         <div>
           <p class="date">${esc(n.date)}</p>
           <h3>${has(n.url) ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>` : esc(n.title)}</h3>
           ${has(n.source) ? `<p class="muted">${esc(n.source)}</p>` : ""}
+          ${linkRow(n.links)}
         </div>
       </article>`).join("")
     : soon;
