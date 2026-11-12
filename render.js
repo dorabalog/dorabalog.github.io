@@ -160,20 +160,27 @@
 
   $("footer-text").textContent = `© ${new Date().getFullYear()} ${SITE.name}`;
 
-  // Content loads after the browser tries to jump to #section links, so jump again.
-  // Jump instantly (not smooth), and again once fonts/images finish loading.
-  const jump = () => {
-    const target = location.hash && document.querySelector(location.hash);
-    if (!target) return;
-    const root = document.documentElement;
-    root.style.scrollBehavior = "auto";
-    target.scrollIntoView();
-    root.style.scrollBehavior = "";
-  };
+  // Content loads after the browser tries to jump to #section links, so jump again
+  // (instantly, not smooth) while fonts and images settle — until the visitor scrolls.
   if (location.hash) {
+    let userScrolled = false;
+    const stop = () => { userScrolled = true; };
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach((ev) =>
+      window.addEventListener(ev, stop, { once: true, passive: true }));
+    const jump = () => {
+      if (userScrolled) return;
+      const target = document.querySelector(location.hash);
+      if (!target) return;
+      const root = document.documentElement;
+      root.style.scrollBehavior = "auto";
+      target.scrollIntoView();
+      root.style.scrollBehavior = "";
+    };
+    jump();
     requestAnimationFrame(jump);
     document.fonts && document.fonts.ready.then(jump);
-    if (document.readyState === "complete") setTimeout(jump, 300);
-    else window.addEventListener("load", jump, { once: true });
+    window.addEventListener("load", jump, { once: true });
+    document.querySelectorAll("img").forEach((img) => img.complete || img.addEventListener("load", jump, { once: true }));
+    [150, 500, 1000, 2000].forEach((ms) => setTimeout(jump, ms));
   }
 })();
