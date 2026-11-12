@@ -128,6 +128,13 @@ const TALKS = [
 
 /* ---------- AWARDS & FELLOWSHIPS ---------- */
 const AWARDS = [
+  {
+    title: "Schneider Go Green 2021: 1st Prize (Southeast Europe), 3rd Prize (Europe)",
+    organization: "Schneider Electric",
+    year: "2021",
+    description: "Electronic skin tattoo that monitors lung capacity and respiratory rate for patients with pulmonary diseases and viral infections.",
+    url: "https://www.linkedin.com/posts/doras-testimonial-schneider-go-green-2022-ugcPost-6891666033027944448-v3Jo/",
+  },
   // {
   //   title: "",
   //   organization: "",  // who gave it
