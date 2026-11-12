@@ -32,7 +32,7 @@ const SITE = {
 const PROJECTS = [
   {
     title: "Neurophotonics Podcast",
-    year: "2024–2026 · 2 seasons",
+    year: "2024–2026 · 10 episodes",
     description:
       "Host of the Boston University Neurophotonics Center podcast, interviewing researchers about breakthroughs across neuroscience, photonics, and data science.",
     image: "images/projects/npc-podcast.jpg",
@@ -68,7 +68,7 @@ const PROJECTS = [
 const PUBLICATIONS = [
   {
     title: "The neurovascular impulse response function differentially reflects intrinsic neuromodulation across cortical regions",
-    authors: "B. Rauscher, N. Fomin-Thunemann, S. Kura, P. Doran, P. Perez, K. Kılıç, E. Martin, D. Balog, … D. Boas, A. Devor (28 authors)",
+    authors: "B. Rauscher, N. Fomin-Thunemann, S. Kura, P. Doran, P. Perez, K. Kılıç, E. Martin, D. Balog, … D. Boas, A. Devor",
     venue: "Nature Neuroscience",
     year: "2026",
     url: "https://doi.org/10.1038/s41593-026-02239-7",
@@ -80,14 +80,13 @@ const PUBLICATIONS = [
   },
   {
     title: "Widefield in vivo imaging system with two fluorescence and two reflectance channels, a single sCMOS detector, and shielded illumination",
-    authors: "P. Doran, N. Fomin-Thunemann, R. Tang, D. Balog, B. Zimmerman, K. Kılıç, … I. Chen, M. Thunemann (18 authors)",
+    authors: "P. Doran, N. Fomin-Thunemann, R. Tang, D. Balog, B. Zimmerman, K. Kılıç, … I. Chen, M. Thunemann",
     venue: "Neurophotonics",
     year: "2024",
     url: "https://doi.org/10.1117/1.NPh.11.3.034310",
     thumbnail: "images/publications/nph-2024-widefield.jpg",
     links: [
       { label: "Paper", url: "https://doi.org/10.1117/1.NPh.11.3.034310" },
-      { label: "Open access (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11177117/" },
     ],
   },
   // {
