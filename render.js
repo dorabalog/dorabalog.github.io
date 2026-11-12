@@ -105,6 +105,18 @@
         : "")
     : soon;
 
+  const writing = typeof WRITING !== "undefined" ? WRITING : [];
+  $("writing-list").innerHTML = writing.length
+    ? writing.map((w) => `
+      <article class="essay-card">
+        <p class="date">${meta(w.year, w.course)}</p>
+        <h3><a href="${esc(w.url)}"><em class="on">On</em> ${esc(w.on)}</a></h3>
+        ${has(w.subtitle) ? `<p class="essay-sub">${esc(w.subtitle)}</p>` : ""}
+        ${has(w.excerpt) ? `<p class="muted">${esc(w.excerpt)}</p>` : ""}
+        <a class="read-more" href="${esc(w.url)}">Read essay →</a>
+      </article>`).join("")
+    : soon;
+
   $("talk-list").innerHTML = simple(typeof TALKS !== "undefined" ? TALKS : [], (t) => `
     <div>
       ${has(t.type) ? `<span class="badge">${esc(t.type)}</span>` : ""}

@@ -113,6 +113,28 @@ const REVIEWS = [
 // Link shown under the list so people can verify reviews on ORCID.
 const REVIEWS_PROFILE = "https://orcid.org/0009-0004-5296-5725";
 
+/* ---------- WRITING ---------- */
+// Essays. "on" is the word(s) after the emphasized "On" in the title.
+// Each essay has its own page in the essays/ folder.
+const WRITING = [
+  {
+    on: "Measuring the Mind at Home",
+    subtitle: "Translating neural subprocess detection to wearable mental-health monitoring",
+    year: "2026",
+    course: "EK 777 · Industry Seminar",
+    excerpt: "Why do we track our sleep, heart rate, and steps every day, but assess mental health only every few weeks in a clinic? A proposal for bringing an algorithmic depression biomarker to everyday wearables.",
+    url: "essays/on-measuring-the-mind.html",
+  },
+  {
+    on: "Integrity",
+    subtitle: "Theo Baker v Marc Tessier-Lavigne: the fall of the 11th president of Stanford University",
+    year: "2024",
+    course: "EK 800 · Responsible Conduct of Research",
+    excerpt: "How power, legal pressure, and the race for faster results shape the integrity of science, and what changes when generative AI can fabricate a figure from a prompt.",
+    url: "essays/on-integrity.html",
+  },
+];
+
 /* ---------- TALKS & POSTERS ---------- */
 const TALKS = [
   // {
