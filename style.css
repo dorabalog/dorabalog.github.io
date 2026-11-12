@@ -112,6 +112,13 @@ p { margin: 0 0 .6em; }
 .badge.soft { background: var(--accent-soft); color: var(--accent); }
 h3 .badge { margin: 0 0 0 6px; }
 
+.review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.review-card { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 16px 18px; }
+.review-card h3 a { color: var(--text); }
+.review-card h3 a:hover { color: var(--accent); }
+.review-card p { margin: 0; font-size: 14px; }
+.review-note { grid-column: 1 / -1; font-size: 13px; margin: 0; }
+
 .footer { padding-top: 48px; padding-bottom: 48px; color: var(--muted); font-size: 13px; }
 
 @media (max-width: 680px) {

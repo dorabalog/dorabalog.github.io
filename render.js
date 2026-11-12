@@ -92,6 +92,19 @@
   const simple = (items, fn) =>
     (items || []).length ? items.map((x) => `<article class="row text">${fn(x)}</article>`).join("") : soon;
 
+  const reviews = typeof REVIEWS !== "undefined" ? REVIEWS : [];
+  $("review-list").innerHTML = reviews.length
+    ? reviews.map((r) => `
+      <article class="review-card">
+        <span class="badge soft">Reviewer</span>
+        <h3>${titleLink(r.journal, r.url)}</h3>
+        <p class="muted">${meta(r.publisher, r.years)}</p>
+      </article>`).join("") +
+      (typeof REVIEWS_PROFILE !== "undefined" && has(REVIEWS_PROFILE)
+        ? `<p class="review-note"><a href="${esc(REVIEWS_PROFILE)}" target="_blank" rel="noopener">Verified on ORCID ↗</a></p>`
+        : "")
+    : soon;
+
   $("talk-list").innerHTML = simple(typeof TALKS !== "undefined" ? TALKS : [], (t) => `
     <div>
       ${has(t.type) ? `<span class="badge">${esc(t.type)}</span>` : ""}

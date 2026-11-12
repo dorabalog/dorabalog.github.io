@@ -66,6 +66,30 @@ const PROJECTS = [
 // thumbnail: a small image from the paper/journal page (a figure or the
 // journal's preview image). Save it in images/publications/.
 const PUBLICATIONS = [
+  {
+    title: "The neurovascular impulse response function differentially reflects intrinsic neuromodulation across cortical regions",
+    authors: "B. Rauscher, N. Fomin-Thunemann, S. Kura, P. Doran, P. Perez, K. Kılıç, E. Martin, D. Balog, … D. Boas, A. Devor (28 authors)",
+    venue: "Nature Neuroscience",
+    year: "2026",
+    url: "https://doi.org/10.1038/s41593-026-02239-7",
+    thumbnail: "images/publications/natneuro-2026-irf.jpg",
+    links: [
+      { label: "Paper", url: "https://doi.org/10.1038/s41593-026-02239-7" },
+      { label: "Preprint", url: "https://doi.org/10.1101/2024.09.14.612514" },
+    ],
+  },
+  {
+    title: "Widefield in vivo imaging system with two fluorescence and two reflectance channels, a single sCMOS detector, and shielded illumination",
+    authors: "P. Doran, N. Fomin-Thunemann, R. Tang, D. Balog, B. Zimmerman, K. Kılıç, … I. Chen, M. Thunemann (18 authors)",
+    venue: "Neurophotonics",
+    year: "2024",
+    url: "https://doi.org/10.1117/1.NPh.11.3.034310",
+    thumbnail: "images/publications/nph-2024-widefield.jpg",
+    links: [
+      { label: "Paper", url: "https://doi.org/10.1117/1.NPh.11.3.034310" },
+      { label: "Open access (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11177117/" },
+    ],
+  },
   // {
   //   title: "",
   //   authors: "",       // your name is bolded automatically
@@ -76,6 +100,19 @@ const PUBLICATIONS = [
   //   links: [{ label: "PDF", url: "" }, { label: "Code", url: "" }],
   // },
 ];
+
+/* ---------- PEER REVIEW ---------- */
+// Journals you've reviewed for (from ORCID). Add a year to "years" for repeat reviews.
+const REVIEWS = [
+  {
+    journal: "Communications Biology",
+    publisher: "Springer Nature",
+    years: "2025",
+    url: "https://www.nature.com/commsbio/",
+  },
+];
+// Link shown under the list so people can verify reviews on ORCID.
+const REVIEWS_PROFILE = "https://orcid.org/0009-0004-5296-5725";
 
 /* ---------- TALKS & POSTERS ---------- */
 const TALKS = [
