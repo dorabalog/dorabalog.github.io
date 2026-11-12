@@ -185,6 +185,13 @@ const NEWS = [
     url: "https://www.bu.edu/eng/2025/03/11/ambassadors-for-those-underrepresented-in-stem/",
     thumbnail: "images/news/abrcms-judges.jpg",
   },
+  {
+    date: "Jan 2022",
+    title: "Testimonial: Schneider Go Green 2021 (video interview)",
+    source: "Schneider Electric · LinkedIn",
+    url: "https://www.linkedin.com/posts/doras-testimonial-schneider-go-green-2022-ugcPost-6891666033027944448-v3Jo/",
+    thumbnail: "images/news/schneider-go-green.jpg",
+  },
   // {
   //   date: "",          // e.g. "Nov 2026"
   //   title: "",
