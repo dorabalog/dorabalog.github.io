@@ -118,20 +118,20 @@ const REVIEWS_PROFILE = "https://orcid.org/0009-0004-5296-5725";
 // Each essay has its own page in the essays/ folder.
 const WRITING = [
   {
-    on: "Measuring the Mind at Home",
+    on: "Tracking Mental Health",
     subtitle: "Translating neural subprocess detection to wearable mental-health monitoring",
     year: "2026",
     course: "EK 777 · Industry Seminar",
     excerpt: "Why do we track our sleep, heart rate, and steps every day, but assess mental health only every few weeks in a clinic? A proposal for bringing an algorithmic depression biomarker to everyday wearables.",
-    url: "essays/on-measuring-the-mind.html",
+    url: "essays/on-tracking-mental-health.html",
   },
   {
-    on: "Integrity",
+    on: "Trust in Science",
     subtitle: "Theo Baker v Marc Tessier-Lavigne: the fall of the 11th president of Stanford University",
     year: "2024",
     course: "EK 800 · Responsible Conduct of Research",
     excerpt: "How power, legal pressure, and the race for faster results shape the integrity of science, and what changes when generative AI can fabricate a figure from a prompt.",
-    url: "essays/on-integrity.html",
+    url: "essays/on-trust-in-science.html",
   },
 ];
 
