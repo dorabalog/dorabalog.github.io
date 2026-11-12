@@ -149,8 +149,19 @@
   $("footer-text").textContent = `© ${new Date().getFullYear()} ${SITE.name}`;
 
   // Content loads after the browser tries to jump to #section links, so jump again.
+  // Jump instantly (not smooth), and again once fonts/images finish loading.
+  const jump = () => {
+    const target = location.hash && document.querySelector(location.hash);
+    if (!target) return;
+    const root = document.documentElement;
+    root.style.scrollBehavior = "auto";
+    target.scrollIntoView();
+    root.style.scrollBehavior = "";
+  };
   if (location.hash) {
-    const target = document.querySelector(location.hash);
-    if (target) requestAnimationFrame(() => target.scrollIntoView());
+    requestAnimationFrame(jump);
+    document.fonts && document.fonts.ready.then(jump);
+    if (document.readyState === "complete") setTimeout(jump, 300);
+    else window.addEventListener("load", jump, { once: true });
   }
 })();
