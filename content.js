@@ -182,7 +182,7 @@ const AWARDS = [
   {
     title: "Best Master's Student Award in Biomedical Engineering",
     organization: "",
-    year: "",
+    year: "2021/22",
   },
   {
     title: "Schneider Go Green 2021: 1st Prize (Southeast Europe), 3rd Prize (Europe)",
