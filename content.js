@@ -129,17 +129,65 @@ const WRITING = [
     on: "Trust in Science",
     subtitle: "Theo Baker v Marc Tessier-Lavigne: the fall of the 11th president of Stanford University",
     year: "2024",
-    course: "EK 800 · Responsible Conduct of Research",
+    course: "EK 800 · Ethics (Responsible Conduct of Research)",
     excerpt: "How power, legal pressure, and the race for faster results shape the integrity of science, and what changes when generative AI can fabricate a figure from a prompt.",
     url: "essays/on-trust-in-science.html",
   },
 ];
 
 /* ---------- TALKS & POSTERS ---------- */
+// Newest first. thumbnail = small image; image = full-size version opened on click.
 const TALKS = [
+  {
+    type: "Talk",
+    title: "Selected 3-minute research talk",
+    event: "9th Annual Neurophotonics Symposium, Boston University",
+    location: "Boston, MA",
+    date: "Jan 2026",
+    links: [{ label: "Symposium", url: "https://www.bu.edu/neurophotonics/news-events/9th-annual-neurophotonics-symposium/" }],
+  },
+  {
+    type: "Invited talk",
+    title: "Tudomány határok nélkül Újvidéktől Bostonig (Science Without Borders: From Novi Sad to Boston)",
+    event: "Európa Kollégium",
+    location: "Novi Sad, Serbia",
+    date: "Jan 2026",
+    thumbnail: "images/talks/europa-kollegium-talk.jpg",
+    links: [{ label: "Article (in Hungarian)", url: "https://europakollegium.com/tudomany-hatarok-nelkul-ujvidektol-bostonig/" }],
+  },
+  {
+    type: "Poster",
+    title: "Simulating the spectral impacts of cholinergic control and rate-dependent calcium in layer 5 pyramidal neurons",
+    authors: "D. Balog, D. Bogatova, H. Nguyen, A. Devor, E.P. Stephen",
+    event: "Society for Neuroscience (SfN) 2025",
+    location: "San Diego, CA",
+    date: "Nov 2025",
+    thumbnail: "images/talks/sfn-2025-thumb.jpg",
+    image: "images/talks/sfn-2025.jpg",
+  },
+  {
+    type: "Poster",
+    title: "Graduate Women in Science and Engineering (GWISE) at BU",
+    event: "BU College of Engineering Summit 2025",
+    location: "Boston, MA",
+    date: "2025",
+    thumbnail: "images/talks/gwise-eng-summit-2025-thumb.jpg",
+    image: "images/talks/gwise-eng-summit-2025.jpg",
+  },
+  {
+    type: "Poster",
+    title: "Cholinergic inputs modulate excitability in layer 5 pyramidal neurons",
+    authors: "D. Balog, H. Nguyen, A. Devor, E.P. Stephen",
+    event: "CRA-WP Grad Cohort for Women 2025",
+    location: "Denver, CO",
+    date: "Apr 2025",
+    thumbnail: "images/talks/crawp-2025-thumb.jpg",
+    image: "images/talks/crawp-2025.jpg",
+  },
   // {
   //   type: "Talk",      // "Talk", "Poster", "Invited talk", "Panel", ...
   //   title: "",
+  //   authors: "",       // optional; your name is bolded automatically
   //   event: "",         // e.g. "Society for Neuroscience 2026"
   //   location: "",      // e.g. "San Diego, CA"
   //   date: "",          // e.g. "Nov 2026"
@@ -204,6 +252,13 @@ const AWARDS = [
 // For courses outside your field (e.g. IP law), set status to
 // "In progress" while you're taking them, "Completed" when done.
 const CERTIFICATIONS = [
+  {
+    title: "Certificate of Recognition: Judge, ABRCMS 2025",
+    issuer: "RocketJudge · Annual Biomedical Research Conference for Minoritized Scientists",
+    date: "Nov 2025",
+    status: "",
+    url: "https://credsverse.com/credentials/9ba2dfbd-74b6-41d6-9ee7-6c98ff6a255c",
+  },
   // {
   //   title: "",         // e.g. "Intellectual Property Law"
   //   issuer: "",        // e.g. "Coursera · University of Pennsylvania"

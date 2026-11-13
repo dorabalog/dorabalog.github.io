@@ -117,13 +117,28 @@
       </article>`).join("")
     : soon;
 
-  $("talk-list").innerHTML = simple(typeof TALKS !== "undefined" ? TALKS : [], (t) => `
-    <div>
-      ${has(t.type) ? `<span class="badge">${esc(t.type)}</span>` : ""}
-      <h3>${esc(t.title)}</h3>
-      <p class="muted">${meta(t.event, t.location, t.date)}</p>
-      ${linkRow(t.links)}
-    </div>`);
+  const talks = typeof TALKS !== "undefined" ? TALKS : [];
+  $("talk-list").innerHTML = talks.length
+    ? talks.map((t) => {
+        const full = has(t.image) ? t.image : t.thumbnail;
+        const thumb = has(t.thumbnail)
+          ? `<a href="${esc(full)}" target="_blank" rel="noopener" tabindex="-1"><img class="thumb" src="${esc(t.thumbnail)}" alt="" loading="lazy"></a>`
+          : `<div class="thumb placeholder" aria-hidden="true">${/poster/i.test(t.type || "") ? "🖼" : "🎤"}</div>`;
+        const links = (t.links || []).slice();
+        if (has(t.image)) links.unshift({ label: "View poster", url: t.image });
+        return `
+        <article class="row">
+          ${thumb}
+          <div>
+            ${has(t.type) ? `<span class="badge">${esc(t.type)}</span>` : ""}
+            <h3>${esc(t.title)}</h3>
+            ${has(t.authors) ? `<p class="muted">${boldMe(t.authors)}</p>` : ""}
+            <p class="venue">${meta(t.event, t.location, t.date)}</p>
+            ${linkRow(links)}
+          </div>
+        </article>`;
+      }).join("")
+    : soon;
 
   $("award-list").innerHTML = simple(typeof AWARDS !== "undefined" ? AWARDS : [], (a) => `
     <div class="date">${esc(a.year)}</div>
