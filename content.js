@@ -140,10 +140,13 @@ const WRITING = [
 const TALKS = [
   {
     type: "Talk",
-    title: "Selected 3-minute research talk",
-    event: "9th Annual Neurophotonics Symposium, Boston University",
+    title: "Spectral Impacts of Cholinergic Control and Rate-Dependent Calcium Dynamics in L5PCs",
+    event: "9th Annual Neurophotonics Symposium, Boston University (selected 3-minute talk)",
     location: "Boston, MA",
     date: "Jan 2026",
+    thumbnail: "images/talks/npc-symposium-2026-thumb.jpg",
+    image: "images/talks/npc-symposium-2026.jpg",
+    imageLabel: "View slide",
     links: [{ label: "Symposium", url: "https://www.bu.edu/neurophotonics/news-events/9th-annual-neurophotonics-symposium/" }],
   },
   {

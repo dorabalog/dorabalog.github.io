@@ -125,7 +125,7 @@
           ? `<a href="${esc(full)}" target="_blank" rel="noopener" tabindex="-1"><img class="thumb" src="${esc(t.thumbnail)}" alt="" loading="lazy"></a>`
           : `<div class="thumb placeholder" aria-hidden="true">${/poster/i.test(t.type || "") ? "🖼" : "🎤"}</div>`;
         const links = (t.links || []).slice();
-        if (has(t.image)) links.unshift({ label: "View poster", url: t.image });
+        if (has(t.image)) links.unshift({ label: has(t.imageLabel) ? t.imageLabel : "View poster", url: t.image });
         return `
         <article class="row">
           ${thumb}
