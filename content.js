@@ -121,7 +121,7 @@ const WRITING = [
     on: "Tracking Mental Health",
     subtitle: "Translating neural subprocess detection to wearable mental-health monitoring",
     year: "2026",
-    course: "EK 777 · Industry Seminar",
+    course: "EK 777 · Research Practice within Industry",
     excerpt: "Why do we track our sleep, heart rate, and steps every day, but assess mental health only every few weeks in a clinic? A proposal for bringing an algorithmic depression biomarker to everyday wearables.",
     url: "essays/on-tracking-mental-health.html",
   },
