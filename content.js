@@ -150,6 +150,41 @@ const TALKS = [
 /* ---------- AWARDS & FELLOWSHIPS ---------- */
 const AWARDS = [
   {
+    title: "Dositeja Fund for Postgraduate Studies at World's Leading Universities",
+    organization: "",
+    year: "2022–present",
+  },
+  {
+    title: "Travel Award: AAAS Catalyzing Advocacy in Science and Engineering Workshop",
+    organization: "AAAS",
+    year: "2025",
+  },
+  {
+    title: "Travel Award: Flatiron Institute Software Workshop",
+    organization: "Flatiron Institute",
+    year: "2025",
+  },
+  {
+    title: "Travel Award: CRA-WP Grad Cohort for Women Workshop",
+    organization: "CRA-WP",
+    year: "2025",
+  },
+  {
+    title: "Travel Award: Allen Institute Modeling Workshop",
+    organization: "Allen Institute",
+    year: "2024",
+  },
+  {
+    title: "Travel Award: BRAIN NeuroAI Workshop",
+    organization: "NIH BRAIN Initiative",
+    year: "2024",
+  },
+  {
+    title: "Best Master's Student Award in Biomedical Engineering",
+    organization: "",
+    year: "",
+  },
+  {
     title: "Schneider Go Green 2021: 1st Prize (Southeast Europe), 3rd Prize (Europe)",
     organization: "Schneider Electric",
     year: "2021",
